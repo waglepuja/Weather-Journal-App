@@ -50,6 +50,6 @@ const data = [];
 app.post('/addMovie', addMovie )
 
 function addMovie (req, res){
-    console.log(req.body)
     data.push(req.body)
+    console.log(req.body)    
  }
