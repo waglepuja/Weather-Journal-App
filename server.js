@@ -28,7 +28,7 @@ app.use(express.static('website'));
 const port = 8000;
 
 // Spin up the server
-const server = app.listen(port, listening);
+const server = app.listen(port,listening);
 
 
 // Callback to debug. This function will run when we execute the listen method to let you know that the server is running and on which port by logging messages to the console. 
@@ -41,8 +41,8 @@ function listening(){
 // Create a GET route that uses the url /all and returns the JavaScript object named projectData.
 app.get('/all', sendData)
 
-function sendData (request, response) {
-    response.send(projectData);
+function sendData (req, res) {
+    res.send(projectData);
 }
 
 // Create an array to hold data. Post Route
@@ -50,10 +50,11 @@ const data = [];
 app.post('/add', addInfo );
 
 function addInfo (req, res){
-    projectData['date'] = req.body.date;
-    projectData['temp'] = req.body.temp;
-    projectData['feelings'] = req.body.feelings;    
-    res.send(projectData);    
+    projectData.date = req.body.date;
+    projectData.temp = req.body.temp;
+    projectData.content = req.body.content;    
+    res.send(projectData);
+    console.log(projectData)   
  }
 
 
