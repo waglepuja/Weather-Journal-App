@@ -23,20 +23,17 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static('website'));
 
-
 // Setup Server
 const port = 8000;
 
 // Spin up the server
-const server = app.listen(port,listening);
-
+const server = app.listen(port, listening);
 
 // Callback to debug. This function will run when we execute the listen method to let you know that the server is running and on which port by logging messages to the console. 
 function listening(){
     console.log("server running");
     console.log(`running on localhost: ${port}`);
 }
-
 
 // Create a GET route that uses the url /all and returns the JavaScript object named projectData.
 app.get('/all', sendData)
@@ -47,7 +44,7 @@ function sendData (req, res) {
 
 // Create an array to hold data. Post Route
 const data = [];
-app.post('/add', addInfo );
+app.post('/addWeatherInfo', addInfo );
 
 function addInfo (req, res){
     projectData.date = req.body.date;

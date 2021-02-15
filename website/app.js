@@ -79,14 +79,6 @@ const updateUI = async () => {
 
 
 
-// 9ea15014039e4036b1113881c7de76a0
-
-// https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid:${APIkey}&units=metric
-
-// projectData['date'] = req.body.date;
-//   projectData['temp'] = req.body.temp;
-//   projectData['content'] = req.body.content;
-//   res.send(projectData);
 
 
 
