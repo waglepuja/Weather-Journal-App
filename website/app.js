@@ -2,7 +2,7 @@
 
 // Base URL and API Key for OpenWeatherMap API
 let baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
-let apiKey = '9ea15014039e4036b1113881c7de76a0';
+let apiKey="&appid=9ea15014039e4036b1113881c7de76a0&units=imperial";  //Fahrenheit
 
 // Create a new date instance dynamically with JS
 let d = new Date();
@@ -74,6 +74,8 @@ const updateUI = async () => {
     console.log("error", error);
   }
 }
+
+
 
 
 
